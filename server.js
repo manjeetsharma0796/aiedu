@@ -1,6 +1,9 @@
 const express = require('express');
 const examiner = require('./examiner');
+const run = require('./ai');
 const app = express();
+const cors = require('cors');
+app.use(cors());    
 const port = process.env.port || 4000;
 
 app.use(express.json());
